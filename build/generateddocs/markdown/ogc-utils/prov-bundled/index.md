@@ -51,7 +51,7 @@ likewise the use of the property `type` is not specified to allow compatibility 
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld",
+  "@context": "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld",
   "id": "Object2",
   "wasDerivedFrom": "Object1"
 }
@@ -98,7 +98,7 @@ this is a simple activity referencing some relevant document
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld",
+  "@context": "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld",
   "provType": "Activity",
   "id": "someActivity_1",
   "endedAtTime": "2029-01-01T22:05:19+02:00",
@@ -223,7 +223,7 @@ DAG defined by an object list.
 ```jsonld
 {
   "@context": [
-    "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld",
+    "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld",
     {
       "@base": "https://example.org/aThing/",
       "agents": "https://someagentregister.eg/",
@@ -311,6 +311,7 @@ DAG defined by an object list.
 <https://example.org/aThing/DP-1> a <http://example.org/myEntities/Survey> ;
     dcterms:provenance <https://example.org/aThing/DP-2223>,
         surveyreg:DP-1-S1 ;
+    dcterms:type "Feature" ;
     prov:wasGeneratedBy surveyreg:DP-1-S1,
         surveyreg:DP-1-S2 .
 
@@ -396,7 +397,7 @@ A [qualified generation](https://www.w3.org/TR/prov-o/#qualifiedGeneration) exam
 ```jsonld
 {
   "@context": [
-    "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld",
+    "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld",
     {
       "@base": "https://example.org/aThing/",
       "agents": "https://someagentregister.eg/",
@@ -441,16 +442,21 @@ A [qualified generation](https://www.w3.org/TR/prov-o/#qualifiedGeneration) exam
 
 #### ttl
 ```ttl
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://example.org/aThing/DP-1> a <http://example.org/myEntities/Survey> ;
-    prov:qualifiedGeneration [ prov:activity <uuid:d7e8b17e-2d80-4c42-a797-bc3628f52c44> ;
+    dcterms:type "Feature" ;
+    prov:qualifiedGeneration [ dcterms:type "Generation" ;
+            prov:activity <uuid:d7e8b17e-2d80-4c42-a797-bc3628f52c44> ;
             prov:atTime "2018-10-25T15:46:38.058365"^^xsd:dateTime ;
             prov:hadRole <wf:main/sorted/output> ] .
 
-<uuid:d7e8b17e-2d80-4c42-a797-bc3628f52c44> rdfs:label "Run of workflow/packed.cwl#main/sorted" .
+<uuid:d7e8b17e-2d80-4c42-a797-bc3628f52c44> rdfs:label "Run of workflow/packed.cwl#main/sorted" ;
+    dcterms:type "Activity",
+        "wfprov:ProcessRun" .
 
 
 ```
@@ -513,7 +519,7 @@ A provenance chain for Large Language Model.
 #### jsonld
 ```jsonld
 {
-  "@context": "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld",
+  "@context": "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld",
   "prov:type": "prov:Activity",
   "generated": {
     "id": "output",
@@ -565,8 +571,15 @@ A provenance chain for Large Language Model.
 
 #### ttl
 ```ttl
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/exampleEntity/file> dcterms:type "Entity" .
+
+<http://www.example.com/exampleEntity/output> dcterms:type "Entity" .
+
+<http://www.example.com/exampleEntity/user_input> dcterms:type "Entity" .
 
 [] prov:endedAtTime "2024-11-19T05:07:34.304708+00:00"^^xsd:dateTime ;
     prov:generated <http://www.example.com/exampleEntity/output> ;
@@ -1538,8 +1551,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/schema.yaml)
+* YAML version: [schema.yaml](https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/schema.json)
+* JSON version: [schema.json](https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/schema.yaml)
 
 
 # JSON-LD Context
@@ -1560,7 +1573,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:type",
+        "anchor": {},
         "hreflang": "dct:language",
         "title": "rdfs:label",
         "length": "dct:extent"
@@ -1583,7 +1596,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
-            "type": "dct:type",
+            "anchor": {},
             "hreflang": "dct:language",
             "title": "rdfs:label",
             "length": "dct:extent"
@@ -1604,7 +1617,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
-            "type": "dct:type",
+            "anchor": {},
             "hreflang": "dct:language",
             "title": "rdfs:label",
             "length": "dct:extent"
@@ -1617,6 +1630,8 @@ Links to the schema:
       "@type": "@id"
     },
     "provType": "@type",
+    "prov:type": {},
+    "type": "dct:type",
     "hadMember": {
       "@id": "prov:hadMember",
       "@type": "@id"
@@ -1645,7 +1660,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:type",
+        "anchor": {},
         "hreflang": "dct:language",
         "title": "rdfs:label",
         "length": "dct:extent"
@@ -1698,7 +1713,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:type",
+        "anchor": {},
         "hreflang": "dct:language",
         "title": "rdfs:label",
         "length": "dct:extent"
@@ -1739,7 +1754,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:type",
+        "anchor": {},
         "hreflang": "dct:language",
         "title": "rdfs:label",
         "length": "dct:extent"
@@ -1997,7 +2012,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld)
+[context.jsonld](https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-bundled/context.jsonld)
 
 ## Sources
 
@@ -2007,6 +2022,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/bblock-prov-schema](https://github.com/ogcincubator/bblock-prov-schema)
+* URL: [https://github.com/ahaywardtvuk/bblock-prov-schema](https://github.com/ahaywardtvuk/bblock-prov-schema)
 * Path: `_sources/prov-bundled`
 
