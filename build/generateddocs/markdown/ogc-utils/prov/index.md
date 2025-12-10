@@ -53,7 +53,7 @@ likewise the use of the property `type` is not specified to allow compatibility 
     {
       "iana": "http://www.iana.org/assignments/"
     },
-    "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld"
+    "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld"
   ],
   "id": "Object2",
   "wasDerivedFrom": "Object1"
@@ -105,7 +105,7 @@ this is a simple activity referencing some relevant document
     {
       "iana": "http://www.iana.org/assignments/"
     },
-    "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld"
+    "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld"
   ],
   "provType": "Activity",
   "id": "someActivity_1",
@@ -234,7 +234,7 @@ DAG defined by an object list.
     {
       "iana": "http://www.iana.org/assignments/"
     },
-    "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld",
+    "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld",
     {
       "@base": "https://example.org/aThing/",
       "agents": "https://someagentregister.eg/",
@@ -322,6 +322,7 @@ DAG defined by an object list.
 <https://example.org/aThing/DP-1> a <http://example.org/myEntities/Survey> ;
     dcterms:provenance <https://example.org/aThing/DP-2223>,
         surveyreg:DP-1-S1 ;
+    dcterms:type "Feature" ;
     prov:wasGeneratedBy surveyreg:DP-1-S1,
         surveyreg:DP-1-S2 .
 
@@ -410,7 +411,7 @@ A [qualified generation](https://www.w3.org/TR/prov-o/#qualifiedGeneration) exam
     {
       "iana": "http://www.iana.org/assignments/"
     },
-    "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld",
+    "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld",
     {
       "@base": "https://example.org/aThing/",
       "agents": "https://someagentregister.eg/",
@@ -455,16 +456,21 @@ A [qualified generation](https://www.w3.org/TR/prov-o/#qualifiedGeneration) exam
 
 #### ttl
 ```ttl
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://example.org/aThing/DP-1> a <http://example.org/myEntities/Survey> ;
-    prov:qualifiedGeneration [ prov:activity <uuid:d7e8b17e-2d80-4c42-a797-bc3628f52c44> ;
+    dcterms:type "Feature" ;
+    prov:qualifiedGeneration [ dcterms:type "Generation" ;
+            prov:activity <uuid:d7e8b17e-2d80-4c42-a797-bc3628f52c44> ;
             prov:atTime "2018-10-25T15:46:38.058365"^^xsd:dateTime ;
             prov:hadRole <wf:main/sorted/output> ] .
 
-<uuid:d7e8b17e-2d80-4c42-a797-bc3628f52c44> rdfs:label "Run of workflow/packed.cwl#main/sorted" .
+<uuid:d7e8b17e-2d80-4c42-a797-bc3628f52c44> rdfs:label "Run of workflow/packed.cwl#main/sorted" ;
+    dcterms:type "Activity",
+        "wfprov:ProcessRun" .
 
 
 ```
@@ -532,7 +538,7 @@ This is a fairly trivial example not attempting to standardise descriptions of s
     {
       "iana": "http://www.iana.org/assignments/"
     },
-    "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld"
+    "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld"
   ],
   "prov:type": "prov:Activity",
   "generated": {
@@ -584,8 +590,13 @@ This is a fairly trivial example not attempting to standardise descriptions of s
 
 #### ttl
 ```ttl
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.example.com/exampleEntity/file> dcterms:type "Entity" .
+
+<http://www.example.com/exampleEntity/output> dcterms:type "Entity" .
 
 <http://www.example.com/exampleEntity/user_input> prov:type "Entity" .
 
@@ -616,12 +627,12 @@ $defs:
     $anchor: oneOrMoreActivitiesOrRefIds
     oneOf:
     - $ref: '#objectref'
-    - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Activity
+    - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Activity
     - type: array
       items:
         anyOf:
         - $ref: '#objectref'
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Activity
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Activity
   oneOrMoreEntitiesOrRefIds:
     $anchor: oneOrMoreEntitiesOrRefIds
     oneOf:
@@ -648,40 +659,40 @@ $defs:
     $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/ogc-utils/json-link/schema.yaml
   Entity:
     $anchor: Entity
-    $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.yaml
+    $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-entity/schema.yaml
   Activity:
     $anchor: Activity
-    $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml
+    $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml
   Agent:
     $anchor: Agent
-    $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.yaml
+    $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.yaml
   Association:
     $anchor: Association
-    $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.yaml#Association
+    $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-agent/schema.yaml#Association
   Influence:
     $anchor: Influence
     type: object
     properties:
       id:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
       influencer:
         anyOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreAgentsOrRefIds
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreAgentsOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#influencer
         x-jsonld-type: '@id'
       entity:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#entity
         x-jsonld-type: '@id'
       activity:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#activity
         x-jsonld-type: '@id'
       agent:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreAgentsOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreAgentsOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#agent
         x-jsonld-type: '@id'
     anyOf:
@@ -707,12 +718,12 @@ $defs:
       qualifiedInfluence:
         oneOf:
         - $ref: '#objectref'
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Influence
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Influence
         - type: array
           items:
             oneOf:
             - $ref: '#objectref'
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Influence
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Influence
         x-jsonld-id: http://www.w3.org/ns/prov#qualifiedInfluence
         x-jsonld-type: '@id'
   Prov:
@@ -1000,8 +1011,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml)
+* YAML version: [schema.yaml](https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.json)
+* JSON version: [schema.json](https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml)
 
 
 # JSON-LD Context
@@ -1022,7 +1033,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:type",
+        "anchor": {},
         "hreflang": "dct:language",
         "title": "rdfs:label",
         "length": "dct:extent"
@@ -1045,7 +1056,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
-            "type": "dct:type",
+            "anchor": {},
             "hreflang": "dct:language",
             "title": "rdfs:label",
             "length": "dct:extent"
@@ -1066,7 +1077,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
-            "type": "dct:type",
+            "anchor": {},
             "hreflang": "dct:language",
             "title": "rdfs:label",
             "length": "dct:extent"
@@ -1079,6 +1090,8 @@ Links to the schema:
       "@type": "@id"
     },
     "provType": "@type",
+    "prov:type": {},
+    "type": "dct:type",
     "hadMember": {
       "@id": "prov:hadMember",
       "@type": "@id"
@@ -1107,7 +1120,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:type",
+        "anchor": {},
         "hreflang": "dct:language",
         "title": "rdfs:label",
         "length": "dct:extent"
@@ -1160,7 +1173,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:type",
+        "anchor": {},
         "hreflang": "dct:language",
         "title": "rdfs:label",
         "length": "dct:extent"
@@ -1372,7 +1385,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:type",
+        "anchor": {},
         "hreflang": "dct:language",
         "title": "rdfs:label",
         "length": "dct:extent"
@@ -1459,7 +1472,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld)
+[context.jsonld](https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/context.jsonld)
 
 ## Sources
 
@@ -1469,6 +1482,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/bblock-prov-schema](https://github.com/ogcincubator/bblock-prov-schema)
+* URL: [https://github.com/ahaywardtvuk/bblock-prov-schema](https://github.com/ahaywardtvuk/bblock-prov-schema)
 * Path: `_sources/prov`
 

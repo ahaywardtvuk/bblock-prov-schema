@@ -20,105 +20,105 @@ $defs:
     type: object
     properties:
       id:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
       featureType:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
         x-jsonld-id: '@type'
       entityType:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
         x-jsonld-id: '@type'
       has_provenance:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Prov
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Prov
         x-jsonld-id: http://purl.org/dc/terms/provenance
         x-jsonld-type: '@id'
       wasGeneratedBy:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#wasGeneratedBy
         x-jsonld-type: '@id'
       wasAttributedTo:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreAgentsOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreAgentsOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#wasAttributedTo
         x-jsonld-type: '@id'
       wasDerivedFrom:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#wasDerivedFrom
         x-jsonld-type: '@id'
       alternateOf:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#alternateOf
         x-jsonld-type: '@id'
       hadPrimarySource:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#hadPrimarySource
         x-jsonld-type: '@id'
       specializationOf:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#specializationOf
         x-jsonld-type: '@id'
       wasInvalidatedBy:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#wasInvalidatedBy
         x-jsonld-type: '@id'
       wasQuotedFrom:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#wasQuotedFrom
         x-jsonld-type: '@id'
       wasRevisionOf:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#wasRevisionOf
         x-jsonld-type: '@id'
       atLocation:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: http://www.w3.org/ns/prov#atLocation
         x-jsonld-type: '@id'
       links:
         type: array
         items:
-          $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#externalLink
+          $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#externalLink
         x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#seeAlso
       qualifiedGeneration:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Generation
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Generation
         - type: array
           items:
             oneOf:
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Generation
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Generation
         x-jsonld-id: http://www.w3.org/ns/prov#qualifiedGeneration
         x-jsonld-type: '@id'
       qualifiedInvalidation:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Invalidation
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Invalidation
         - type: array
           items:
             oneOf:
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Invalidation
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Invalidation
         x-jsonld-id: http://www.w3.org/ns/prov#qualifiedInvalidation
         x-jsonld-type: '@id'
       qualifiedDerivation:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Derivation
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Derivation
         - type: array
           items:
             oneOf:
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Derivation
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Derivation
         x-jsonld-id: http://www.w3.org/ns/prov#qualifiedDerivation
         x-jsonld-type: '@id'
       qualifiedAttribution:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Attribution
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Attribution
         - type: array
           items:
             oneOf:
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Attribution
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Attribution
         x-jsonld-id: http://www.w3.org/ns/prov#qualifiedAttribution
         x-jsonld-type: '@id'
     required:
@@ -178,7 +178,7 @@ $defs:
       - hadMember
       - type
     allOf:
-    - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#influenced
+    - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#influenced
 anyOf:
 - $ref: '#/$defs/Entity'
 x-jsonld-extra-terms:

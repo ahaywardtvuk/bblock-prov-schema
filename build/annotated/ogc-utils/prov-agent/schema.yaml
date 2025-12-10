@@ -32,31 +32,31 @@ $defs:
     type: object
     properties:
       agentType:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
         x-jsonld-id: '@type'
       name:
         type: string
         x-jsonld-id: http://www.w3.org/2000/01/rdf-schema#label
       id:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
       actedOnBehalfOf:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreAgentsOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreAgentsOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#actedOnBehalfOf
         x-jsonld-type: '@id'
       atLocation:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: http://www.w3.org/ns/prov#atLocation
         x-jsonld-type: '@id'
       qualifiedDelegation:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Delegation
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Delegation
         - type: array
           items:
             oneOf:
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Delegation
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml#Delegation
         x-jsonld-id: http://www.w3.org/ns/prov#qualifiedDelegation
         x-jsonld-type: '@id'
     oneOf:
@@ -90,13 +90,13 @@ $defs:
     - required:
       - actedOnBehalfOf
     allOf:
-    - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#influenced
+    - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#influenced
   Association:
     $anchor: Association
     type: object
     properties:
       id:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
       type:
         oneOf:
@@ -110,16 +110,16 @@ $defs:
             type: string
       agent:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         - $ref: '#/$defs/Agent'
         x-jsonld-id: http://www.w3.org/ns/prov#agent
         x-jsonld-type: '@id'
       hadRole:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
         x-jsonld-id: http://www.w3.org/ns/prov#hadRole
         x-jsonld-type: '@id'
       hadPlan:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
         x-jsonld-id: http://www.w3.org/ns/prov#hadPlan
         x-jsonld-type: '@id'
 anyOf:

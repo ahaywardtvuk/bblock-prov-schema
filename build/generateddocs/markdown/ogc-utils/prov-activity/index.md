@@ -49,7 +49,7 @@ this is a simple activity referencing some relevant document
     {
       "iana": "http://www.iana.org/assignments/"
     },
-    "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/context.jsonld"
+    "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/context.jsonld"
   ],
   "provType": "Activity",
   "id": "someActivity_1",
@@ -153,7 +153,7 @@ This is a fairly trivial example not attempting to standardise descriptions of s
     {
       "iana": "http://www.iana.org/assignments/"
     },
-    "https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/context.jsonld"
+    "https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/context.jsonld"
   ],
   "prov:type": "prov:Activity",
   "generated": {
@@ -249,12 +249,12 @@ $defs:
     type: object
     properties:
       id:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
       type:
         $ref: '#/$defs/ActivityTypes'
       activityType:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
         x-jsonld-id: '@type'
       prov:type:
         $ref: '#/$defs/ActivityTypes'
@@ -263,80 +263,80 @@ $defs:
         x-jsonld-id: http://www.w3.org/ns/prov#endedAtTime
         x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
       wasAssociatedWith:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreAgentsOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreAgentsOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#wasAssociatedWith
         x-jsonld-type: '@id'
       wasInformedBy:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#wasInformedBy
         x-jsonld-type: '@id'
       used:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#used
         x-jsonld-type: '@id'
       wasStartedBy:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#wasStartedBy
         x-jsonld-type: '@id'
       wasEndedBy:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#wasEndedBy
         x-jsonld-type: '@id'
       invalidated:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#invalidated
         x-jsonld-type: '@id'
       generated:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#generated
         x-jsonld-type: '@id'
       atLocation:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: http://www.w3.org/ns/prov#atLocation
         x-jsonld-type: '@id'
       qualifiedUsage:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         - $ref: '#/$defs/Usage'
         - type: array
           items:
             oneOf:
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
             - $ref: '#/$defs/Usage'
         x-jsonld-id: http://www.w3.org/ns/prov#qualifiedUsage
         x-jsonld-type: '@id'
       qualifiedCommunication:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         - $ref: '#/$defs/Communication'
         - type: array
           items:
             oneOf:
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
             - $ref: '#/$defs/Generation'
         x-jsonld-id: http://www.w3.org/ns/prov#qualifiedCommunication
         x-jsonld-type: '@id'
       qualifiedStart:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         - $ref: '#/$defs/Start'
         x-jsonld-id: http://www.w3.org/ns/prov#qualifiedStart
         x-jsonld-type: '@id'
       qualifiedEnd:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         - $ref: '#/$defs/End'
         x-jsonld-id: http://www.w3.org/ns/prov#qualifiedEnd
         x-jsonld-type: '@id'
       qualifiedAssociation:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Association
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Association
         - type: array
           items:
             oneOf:
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-            - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Association
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+            - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Association
         x-jsonld-id: http://www.w3.org/ns/prov#qualifiedAssociation
         x-jsonld-type: '@id'
     anyOf:
@@ -357,13 +357,13 @@ $defs:
     - required:
       - wasAssociatedWith
     allOf:
-    - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#influenced
+    - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#influenced
   Usage:
     $anchor: Usage
     type: object
     properties:
       id:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
       type:
         oneOf:
@@ -384,7 +384,7 @@ $defs:
         x-jsonld-id: http://www.w3.org/ns/prov#atTime
         x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
       entity:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreEntitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#entity
         x-jsonld-type: '@id'
     required:
@@ -394,26 +394,26 @@ $defs:
     type: object
     properties:
       id:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
       atTime:
         $ref: '#/$defs/dateTime'
         x-jsonld-id: http://www.w3.org/ns/prov#atTime
         x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
       hadRole:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
         x-jsonld-id: http://www.w3.org/ns/prov#hadRole
         x-jsonld-type: '@id'
       influencer:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
         x-jsonld-id: http://www.w3.org/ns/prov#influencer
         x-jsonld-type: '@id'
       hadActivity:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#hadActivity
         x-jsonld-type: '@id'
       activity:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreActivitiesOrRefIds
         x-jsonld-id: http://www.w3.org/ns/prov#activity
         x-jsonld-type: '@id'
   Generation:
@@ -475,7 +475,7 @@ $defs:
     type: object
     properties:
       id:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
       type:
         oneOf:
@@ -489,26 +489,26 @@ $defs:
             type: string
       hadGeneration:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         - $ref: '#/$defs/Generation'
         x-jsonld-id: http://www.w3.org/ns/prov#hadGeneration
         x-jsonld-type: '@id'
       hadActivity:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         - $ref: '#/$defs/Activity'
         x-jsonld-id: http://www.w3.org/ns/prov#hadActivity
         x-jsonld-type: '@id'
       hadUsage:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         - $ref: '#/$defs/Usage'
         x-jsonld-id: http://www.w3.org/ns/prov#hadUsage
         x-jsonld-type: '@id'
       entity:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Entity
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Entity
         x-jsonld-id: http://www.w3.org/ns/prov#entity
         x-jsonld-type: '@id'
     required:
@@ -519,7 +519,7 @@ $defs:
     type: object
     properties:
       id:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
       type:
         oneOf:
@@ -533,13 +533,13 @@ $defs:
             type: string
       agent:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Agent
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Agent
         x-jsonld-id: http://www.w3.org/ns/prov#agent
         x-jsonld-type: '@id'
       hadActivity:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         - $ref: '#/$defs/Activity'
         x-jsonld-id: http://www.w3.org/ns/prov#hadActivity
         x-jsonld-type: '@id'
@@ -548,7 +548,7 @@ $defs:
     type: object
     properties:
       id:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
       type:
         oneOf:
@@ -562,15 +562,15 @@ $defs:
             type: string
       agent:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Agent
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Agent
         x-jsonld-id: http://www.w3.org/ns/prov#agent
         x-jsonld-type: '@id'
   StartOrEnd:
     type: object
     properties:
       id:
-        $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
       type:
         oneOf:
@@ -584,13 +584,13 @@ $defs:
         x-jsonld-type: http://www.w3.org/2001/XMLSchema#dateTime
       entity:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Entity
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#Entity
         x-jsonld-id: http://www.w3.org/ns/prov#entity
         x-jsonld-type: '@id'
       hadActivity:
         oneOf:
-        - $ref: https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
+        - $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         - $ref: '#/$defs/Activity'
         x-jsonld-id: http://www.w3.org/ns/prov#hadActivity
         x-jsonld-type: '@id'
@@ -842,8 +842,8 @@ x-jsonld-prefixes:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json)
-* JSON version: [schema.json](https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml)
+* YAML version: [schema.yaml](https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.json)
+* JSON version: [schema.json](https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/schema.yaml)
 
 
 # JSON-LD Context
@@ -853,6 +853,7 @@ Links to the schema:
   "@context": {
     "wasInfluencedBy": {
       "@context": {
+        "type": "dct:type",
         "href": {
           "@type": "@id",
           "@id": "oa:hasTarget"
@@ -864,7 +865,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
-        "type": "dct:type",
+        "anchor": {},
         "hreflang": "dct:language",
         "title": "rdfs:label",
         "length": "dct:extent"
@@ -876,6 +877,7 @@ Links to the schema:
       "@context": {
         "influencer": {
           "@context": {
+            "type": "dct:type",
             "href": {
               "@type": "@id",
               "@id": "oa:hasTarget"
@@ -887,7 +889,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
-            "type": "dct:type",
+            "anchor": {},
             "hreflang": "dct:language",
             "title": "rdfs:label",
             "length": "dct:extent"
@@ -897,6 +899,13 @@ Links to the schema:
         },
         "entity": {
           "@context": {
+            "has_provenance": {
+              "@context": {
+                "type": "dct:type"
+              },
+              "@id": "dct:provenance",
+              "@type": "@id"
+            },
             "wasAttributedTo": {
               "@context": {
                 "href": {
@@ -910,6 +919,7 @@ Links to the schema:
                   "@id": "http://www.iana.org/assignments/relation",
                   "@type": "@id"
                 },
+                "anchor": {},
                 "type": "dct:type",
                 "hreflang": "dct:language",
                 "title": "rdfs:label",
@@ -931,6 +941,7 @@ Links to the schema:
                   "@id": "http://www.iana.org/assignments/relation",
                   "@type": "@id"
                 },
+                "anchor": {},
                 "type": "dct:type",
                 "hreflang": "dct:language",
                 "title": "rdfs:label",
@@ -940,6 +951,13 @@ Links to the schema:
             }
           },
           "@id": "prov:entity",
+          "@type": "@id"
+        },
+        "activity": {
+          "@context": {
+            "type": "dct:type"
+          },
+          "@id": "prov:activity",
           "@type": "@id"
         },
         "agent": {
@@ -955,6 +973,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
@@ -968,7 +987,9 @@ Links to the schema:
       "@type": "@id"
     },
     "id": "@id",
+    "type": {},
     "activityType": "@type",
+    "prov:type": {},
     "endedAtTime": {
       "@id": "prov:endedAtTime",
       "@type": "xsd:dateTime"
@@ -986,6 +1007,7 @@ Links to the schema:
           "@id": "http://www.iana.org/assignments/relation",
           "@type": "@id"
         },
+        "anchor": {},
         "type": "dct:type",
         "hreflang": "dct:language",
         "title": "rdfs:label",
@@ -995,11 +1017,21 @@ Links to the schema:
       "@type": "@id"
     },
     "wasInformedBy": {
+      "@context": {
+        "type": "dct:type"
+      },
       "@id": "prov:wasInformedBy",
       "@type": "@id"
     },
     "used": {
       "@context": {
+        "has_provenance": {
+          "@context": {
+            "type": "dct:type"
+          },
+          "@id": "dct:provenance",
+          "@type": "@id"
+        },
         "wasAttributedTo": {
           "@context": {
             "href": {
@@ -1013,6 +1045,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
@@ -1034,12 +1067,26 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
             "length": "dct:extent"
           },
           "@id": "rdfs:seeAlso"
+        },
+        "qualifiedAttribution": {
+          "@context": {
+            "agent": {
+              "@context": {
+                "type": "dct:type"
+              },
+              "@id": "prov:agent",
+              "@type": "@id"
+            }
+          },
+          "@id": "prov:qualifiedAttribution",
+          "@type": "@id"
         }
       },
       "@id": "prov:used",
@@ -1047,6 +1094,13 @@ Links to the schema:
     },
     "wasStartedBy": {
       "@context": {
+        "has_provenance": {
+          "@context": {
+            "type": "dct:type"
+          },
+          "@id": "dct:provenance",
+          "@type": "@id"
+        },
         "wasAttributedTo": {
           "@context": {
             "href": {
@@ -1060,6 +1114,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
@@ -1081,12 +1136,26 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
             "length": "dct:extent"
           },
           "@id": "rdfs:seeAlso"
+        },
+        "qualifiedAttribution": {
+          "@context": {
+            "agent": {
+              "@context": {
+                "type": "dct:type"
+              },
+              "@id": "prov:agent",
+              "@type": "@id"
+            }
+          },
+          "@id": "prov:qualifiedAttribution",
+          "@type": "@id"
         }
       },
       "@id": "prov:wasStartedBy",
@@ -1094,6 +1163,13 @@ Links to the schema:
     },
     "wasEndedBy": {
       "@context": {
+        "has_provenance": {
+          "@context": {
+            "type": "dct:type"
+          },
+          "@id": "dct:provenance",
+          "@type": "@id"
+        },
         "wasAttributedTo": {
           "@context": {
             "href": {
@@ -1107,6 +1183,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
@@ -1128,12 +1205,26 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
             "length": "dct:extent"
           },
           "@id": "rdfs:seeAlso"
+        },
+        "qualifiedAttribution": {
+          "@context": {
+            "agent": {
+              "@context": {
+                "type": "dct:type"
+              },
+              "@id": "prov:agent",
+              "@type": "@id"
+            }
+          },
+          "@id": "prov:qualifiedAttribution",
+          "@type": "@id"
         }
       },
       "@id": "prov:wasEndedBy",
@@ -1141,6 +1232,13 @@ Links to the schema:
     },
     "invalidated": {
       "@context": {
+        "has_provenance": {
+          "@context": {
+            "type": "dct:type"
+          },
+          "@id": "dct:provenance",
+          "@type": "@id"
+        },
         "wasAttributedTo": {
           "@context": {
             "href": {
@@ -1154,6 +1252,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
@@ -1175,12 +1274,26 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
             "length": "dct:extent"
           },
           "@id": "rdfs:seeAlso"
+        },
+        "qualifiedAttribution": {
+          "@context": {
+            "agent": {
+              "@context": {
+                "type": "dct:type"
+              },
+              "@id": "prov:agent",
+              "@type": "@id"
+            }
+          },
+          "@id": "prov:qualifiedAttribution",
+          "@type": "@id"
         }
       },
       "@id": "prov:invalidated",
@@ -1188,6 +1301,13 @@ Links to the schema:
     },
     "generated": {
       "@context": {
+        "has_provenance": {
+          "@context": {
+            "type": "dct:type"
+          },
+          "@id": "dct:provenance",
+          "@type": "@id"
+        },
         "wasAttributedTo": {
           "@context": {
             "href": {
@@ -1201,6 +1321,7 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
@@ -1222,12 +1343,26 @@ Links to the schema:
               "@id": "http://www.iana.org/assignments/relation",
               "@type": "@id"
             },
+            "anchor": {},
             "type": "dct:type",
             "hreflang": "dct:language",
             "title": "rdfs:label",
             "length": "dct:extent"
           },
           "@id": "rdfs:seeAlso"
+        },
+        "qualifiedAttribution": {
+          "@context": {
+            "agent": {
+              "@context": {
+                "type": "dct:type"
+              },
+              "@id": "prov:agent",
+              "@type": "@id"
+            }
+          },
+          "@id": "prov:qualifiedAttribution",
+          "@type": "@id"
         }
       },
       "@id": "prov:generated",
@@ -1241,6 +1376,13 @@ Links to the schema:
       "@context": {
         "entity": {
           "@context": {
+            "has_provenance": {
+              "@context": {
+                "type": "dct:type"
+              },
+              "@id": "dct:provenance",
+              "@type": "@id"
+            },
             "wasAttributedTo": {
               "@context": {
                 "href": {
@@ -1254,6 +1396,7 @@ Links to the schema:
                   "@id": "http://www.iana.org/assignments/relation",
                   "@type": "@id"
                 },
+                "anchor": {},
                 "type": "dct:type",
                 "hreflang": "dct:language",
                 "title": "rdfs:label",
@@ -1275,12 +1418,26 @@ Links to the schema:
                   "@id": "http://www.iana.org/assignments/relation",
                   "@type": "@id"
                 },
+                "anchor": {},
                 "type": "dct:type",
                 "hreflang": "dct:language",
                 "title": "rdfs:label",
                 "length": "dct:extent"
               },
               "@id": "rdfs:seeAlso"
+            },
+            "qualifiedAttribution": {
+              "@context": {
+                "agent": {
+                  "@context": {
+                    "type": "dct:type"
+                  },
+                  "@id": "prov:agent",
+                  "@type": "@id"
+                }
+              },
+              "@id": "prov:qualifiedAttribution",
+              "@type": "@id"
             }
           },
           "@id": "prov:entity",
@@ -1291,6 +1448,22 @@ Links to the schema:
       "@type": "@id"
     },
     "qualifiedCommunication": {
+      "@context": {
+        "hadActivity": {
+          "@context": {
+            "type": "dct:type"
+          },
+          "@id": "prov:hadActivity",
+          "@type": "@id"
+        },
+        "activity": {
+          "@context": {
+            "type": "dct:type"
+          },
+          "@id": "prov:activity",
+          "@type": "@id"
+        }
+      },
       "@id": "prov:qualifiedCommunication",
       "@type": "@id"
     },
@@ -1298,6 +1471,13 @@ Links to the schema:
       "@context": {
         "entity": {
           "@context": {
+            "has_provenance": {
+              "@context": {
+                "type": "dct:type"
+              },
+              "@id": "dct:provenance",
+              "@type": "@id"
+            },
             "wasAttributedTo": {
               "@context": {
                 "href": {
@@ -1311,6 +1491,7 @@ Links to the schema:
                   "@id": "http://www.iana.org/assignments/relation",
                   "@type": "@id"
                 },
+                "anchor": {},
                 "type": "dct:type",
                 "hreflang": "dct:language",
                 "title": "rdfs:label",
@@ -1332,12 +1513,26 @@ Links to the schema:
                   "@id": "http://www.iana.org/assignments/relation",
                   "@type": "@id"
                 },
+                "anchor": {},
                 "type": "dct:type",
                 "hreflang": "dct:language",
                 "title": "rdfs:label",
                 "length": "dct:extent"
               },
               "@id": "rdfs:seeAlso"
+            },
+            "qualifiedAttribution": {
+              "@context": {
+                "agent": {
+                  "@context": {
+                    "type": "dct:type"
+                  },
+                  "@id": "prov:agent",
+                  "@type": "@id"
+                }
+              },
+              "@id": "prov:qualifiedAttribution",
+              "@type": "@id"
             }
           },
           "@id": "prov:entity",
@@ -1351,6 +1546,13 @@ Links to the schema:
       "@context": {
         "entity": {
           "@context": {
+            "has_provenance": {
+              "@context": {
+                "type": "dct:type"
+              },
+              "@id": "dct:provenance",
+              "@type": "@id"
+            },
             "wasAttributedTo": {
               "@context": {
                 "href": {
@@ -1364,6 +1566,7 @@ Links to the schema:
                   "@id": "http://www.iana.org/assignments/relation",
                   "@type": "@id"
                 },
+                "anchor": {},
                 "type": "dct:type",
                 "hreflang": "dct:language",
                 "title": "rdfs:label",
@@ -1385,12 +1588,26 @@ Links to the schema:
                   "@id": "http://www.iana.org/assignments/relation",
                   "@type": "@id"
                 },
+                "anchor": {},
                 "type": "dct:type",
                 "hreflang": "dct:language",
                 "title": "rdfs:label",
                 "length": "dct:extent"
               },
               "@id": "rdfs:seeAlso"
+            },
+            "qualifiedAttribution": {
+              "@context": {
+                "agent": {
+                  "@context": {
+                    "type": "dct:type"
+                  },
+                  "@id": "prov:agent",
+                  "@type": "@id"
+                }
+              },
+              "@id": "prov:qualifiedAttribution",
+              "@type": "@id"
             }
           },
           "@id": "prov:entity",
@@ -1401,6 +1618,15 @@ Links to the schema:
       "@type": "@id"
     },
     "qualifiedAssociation": {
+      "@context": {
+        "agent": {
+          "@context": {
+            "type": "dct:type"
+          },
+          "@id": "prov:agent",
+          "@type": "@id"
+        }
+      },
       "@id": "prov:qualifiedAssociation",
       "@type": "@id"
     },
@@ -1674,7 +1900,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://ogcincubator.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/context.jsonld)
+[context.jsonld](https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov-activity/context.jsonld)
 
 ## Sources
 
@@ -1684,6 +1910,6 @@ You can find the full JSON-LD context here:
 
 The source code for this Building Block can be found in the following repository:
 
-* URL: [https://github.com/ogcincubator/bblock-prov-schema](https://github.com/ogcincubator/bblock-prov-schema)
+* URL: [https://github.com/ahaywardtvuk/bblock-prov-schema](https://github.com/ahaywardtvuk/bblock-prov-schema)
 * Path: `_sources/prov-activity`
 
