@@ -135,10 +135,11 @@
       "@id": "prov:qualifiedInfluence",
       "@type": "@id"
     },
-    "id": "@id",
-    "type": {},
-    "activityType": "@type",
+    "provType": "@type",
     "prov:type": {},
+    "type": {},
+    "id": "@id",
+    "activityType": "@type",
     "endedAtTime": {
       "@id": "prov:endedAtTime",
       "@type": "xsd:dateTime"
@@ -782,7 +783,6 @@
     "agentType": "@type",
     "entityType": "@type",
     "featureType": "@type",
-    "provType": "@type",
     "Activity": "prov:Activity",
     "ActivityInfluence": "prov:ActivityInfluence",
     "Agent": "prov:Agent",

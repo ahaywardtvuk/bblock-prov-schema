@@ -251,13 +251,9 @@ $defs:
       id:
         $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#objectref
         x-jsonld-id: '@id'
-      type:
-        $ref: '#/$defs/ActivityTypes'
       activityType:
         $ref: https://ahaywardtvuk.github.io/bblock-prov-schema/build/annotated/ogc-utils/prov/schema.yaml#oneOrMoreObjectref
         x-jsonld-id: '@type'
-      prov:type:
-        $ref: '#/$defs/ActivityTypes'
       endedAtTime:
         $ref: '#/$defs/dateTime'
         x-jsonld-id: http://www.w3.org/ns/prov#endedAtTime
@@ -342,9 +338,21 @@ $defs:
     anyOf:
     - required:
       - activityType
-    - required:
+    - properties:
+        provType:
+          $ref: '#/$defs/ActivityTypes'
+          x-jsonld-id: '@type'
+      required:
+      - provType
+    - properties:
+        prov:type:
+          $ref: '#/$defs/ActivityTypes'
+      required:
       - prov:type
-    - required:
+    - properties:
+        type:
+          $ref: '#/$defs/ActivityTypes'
+      required:
       - type
     - required:
       - used
@@ -620,7 +628,6 @@ x-jsonld-extra-terms:
   agentType: '@type'
   entityType: '@type'
   featureType: '@type'
-  provType: '@type'
   Activity: http://www.w3.org/ns/prov#Activity
   ActivityInfluence: http://www.w3.org/ns/prov#ActivityInfluence
   Agent: http://www.w3.org/ns/prov#Agent
@@ -986,10 +993,11 @@ Links to the schema:
       "@id": "prov:qualifiedInfluence",
       "@type": "@id"
     },
-    "id": "@id",
-    "type": {},
-    "activityType": "@type",
+    "provType": "@type",
     "prov:type": {},
+    "type": {},
+    "id": "@id",
+    "activityType": "@type",
     "endedAtTime": {
       "@id": "prov:endedAtTime",
       "@type": "xsd:dateTime"
@@ -1633,7 +1641,6 @@ Links to the schema:
     "agentType": "@type",
     "entityType": "@type",
     "featureType": "@type",
-    "provType": "@type",
     "Activity": "prov:Activity",
     "ActivityInfluence": "prov:ActivityInfluence",
     "Agent": "prov:Agent",
